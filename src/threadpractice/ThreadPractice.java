@@ -12,14 +12,16 @@ package threadpractice;
 public class ThreadPractice extends Thread{
     @Override
     public void run(){
-        for( int i = 1; i <= 5; i++ ){
-            try{
-                Thread.sleep( 500 );
-            }catch( Exception ex ){
-                System.out.println( ex );
-            }
-            System.out.println(i);
-        }
+//        for( int i = 1; i <= 5; i++ ){
+//            try{
+//                Thread.sleep( 500 );
+//            }catch( Exception ex ){
+//                System.out.println( ex );
+//            }
+//            System.out.println(i);
+//        }
+        System.out.println( "Running thread name is : " + Thread.currentThread().getName() );
+        System.out.println( "Running thread priority: " + Thread.currentThread().getPriority() );
     }
 
     /**
@@ -33,12 +35,12 @@ public class ThreadPractice extends Thread{
         
         t1.start();
         //JOIN Method To be implemented
-        try {
-            // long seconds added 
-            t1.join( 1500 );
-        } catch ( InterruptedException ex ) {
-            System.out.println( ex );
-        }
+//        try {
+//            // long seconds added 
+//            t1.join( 1500 );
+//        } catch ( InterruptedException ex ) {
+//            System.out.println( ex );
+//        }
         
         t2.start();
         t3.start();
@@ -54,6 +56,9 @@ public class ThreadPractice extends Thread{
 //        System.out.println( t1.getId() );
 //        System.out.println( t2.getId() );
 //        System.out.println( t3.getId() );
+        
+        t1.setPriority(MAX_PRIORITY);
+        t3.setPriority(MIN_PRIORITY);
     }
     
 }
