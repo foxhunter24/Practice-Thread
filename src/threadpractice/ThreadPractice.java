@@ -57,8 +57,8 @@ public class ThreadPractice extends Thread{
 //        System.out.println( t2.getId() );
 //        System.out.println( t3.getId() );
         
-        t1.setPriority(MAX_PRIORITY);
-        t3.setPriority(MIN_PRIORITY);
+        t1.setPriority( MAX_PRIORITY );
+        t3.setPriority( MIN_PRIORITY );
     }
     
 }
